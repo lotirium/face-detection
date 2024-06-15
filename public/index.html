@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face Recognition Brain</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/script.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <nav>
+            <p onclick="logout()">Sign Out</p>
+        </nav>
+        <div class="content">
+            <h2>Welcome, <span id="user-name"></span></h2>
+            <div class="input-form">
+                <input type="text" id="iu" placeholder="Enter image URL">
+                <button onclick="sbmt()">Detect</button>
+                <form id="upload-form" enctype="multipart/form-data">
+                    <label for="image-file" class="fl">
+                        <i class="fas fa-upload"></i>
+                        <input type="file" id="image-file" accept="image/*">
+                    </label>
+                    <button type="submit">Upload and Detect</button>
+                </form>
+            </div>
+            <div class="id">
+                <img id="ii" src="" alt="Image to analyze">
+                <div id="li" class="loading" style="display: none;">
+                    <div class="spin"></div>
+                </div>
+            </div>
+            <div id="em" class="error" style="display: none;"></div>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>
